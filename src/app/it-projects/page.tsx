@@ -4,7 +4,7 @@ import portfolioData from "@/data/portfolio.json";
 type Project = {
   id: string; name: string; type: string; description: string; url?: string;
   status?: string; summary?: string; problem?: string; role?: string;
-  features?: string[]; outcome?: string;
+  features?: string[]; outcome?: string; image?: string; logo?: string;
 };
 const projects = portfolioData.projects as Project[];
 
@@ -29,9 +29,9 @@ export default function ITProjectsPage() {
       <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><p className="eyebrow">Selected initiatives</p><h2 className="section-title mt-5">The project files</h2></div><p className="max-w-sm text-sm leading-7 text-[var(--muted)]">Open a project for its summary, then explore the full case study, role, scope and current status.</p></div>
       <div className="space-y-6">{projects.map((project,index)=><article key={project.id} className="grid overflow-hidden border border-[var(--line)] bg-[#eeece5] md:grid-cols-[.78fr_1.22fr]">
         <div className={`relative flex min-h-[240px] flex-col justify-between overflow-hidden p-7 md:min-h-[330px] ${index===0?"bg-[#dce3df] text-[#334b43]":index===1?"bg-[#e5dfd4] text-[#514535]":"bg-[#dce4e9] text-[#304c60]"}`}>
-          <div className="relative z-10 flex justify-between text-[10px] uppercase tracking-[.18em]"><span>Project file</span><span>0{index+1}</span></div>
-          <div className="relative z-10"><p className="text-xs uppercase tracking-[.16em] opacity-70">{project.type}</p><p className="mt-3 max-w-md text-4xl tracking-[-.07em] md:text-5xl">{project.name}</p></div>
-          <div className="pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full border border-current opacity-20"/><div className="pointer-events-none absolute -right-2 -top-6 h-52 w-52 rounded-full border border-current opacity-20"/>
+          {project.image ? <img src={project.image} alt={`${project.name} project`} className="absolute inset-0 h-full w-full object-cover"/> : <div className="pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full border border-current opacity-20"/>}
+          <div className="relative z-10 flex justify-between text-[10px] uppercase tracking-[.18em]"><span className={project.image?"bg-black/50 px-2 py-1 text-white":""}>Project file</span><span className={project.image?"bg-black/50 px-2 py-1 text-white":""}>0{index+1}</span></div>
+          <div className={`relative z-10 ${project.image?"mt-auto bg-black/55 p-4 text-white":""}`}><p className="text-xs uppercase tracking-[.16em] opacity-70">{project.type}</p><p className="mt-3 max-w-md text-4xl tracking-[-.07em] md:text-5xl">{project.name}</p></div>
         </div>
         <div className="flex flex-col justify-between p-7 md:p-10">
           <div><div className="flex flex-wrap items-center gap-3"><span className="eyebrow">{project.status}</span><span className="h-px w-8 bg-[var(--line)]"/></div><h3 className="mt-5 text-2xl tracking-[-.05em]">{project.summary || project.description}</h3><p className="mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)]">{project.problem}</p><div className="mt-7 grid gap-3 sm:grid-cols-2">{(project.features||[]).slice(0,4).map(item=><p key={item} className="border-t border-[var(--line)] pt-3 text-xs leading-5 text-[var(--muted)]">{item}</p>)}</div></div>
