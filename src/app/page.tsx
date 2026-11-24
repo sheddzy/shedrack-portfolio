@@ -8,7 +8,7 @@ const services = [
 ];
 const projects = [
 {name:"AtelierOS",type:"Fashion business management · SaaS",description:"A platform for fashion houses to manage clients, measurements, orders, production and inventory.",url:"https://atelieros.optiflowops.online",status:"In development"},
-{name:"Sowvera",type:"Fashion education · EdTech",description:"A planned operating system for fashion schools, connecting admissions, students, programmes, lessons and administration.",url:"",status:"Product development"},
+{name:"Sowvera",type:"Fashion education · EdTech",description:"A planned operating system for fashion schools, connecting admissions, students, programmes, lessons and administration.",url:"https://sowvera.optiflowops.online",status:"Product development"},
 {name:"OptiFlow Ops Solutions",type:"Operations consulting · Business systems",description:"Operations, HR operations, project coordination and practical digital solutions for businesses.",url:"https://optiflowops.online",status:"Business website"}
 ];
 export default function Home(){return <main>
