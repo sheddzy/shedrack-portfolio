@@ -130,7 +130,16 @@
     }
   ],
   "digitalSetups": [],
-  "experience": [],
+  "experience": [
+    {
+      "id": "i-am-fit-nigeria",
+      "organisation": "I Am Fit Nigeria",
+      "position": "Branch Operations Manager",
+      "start": "2025",
+      "end": "2025",
+      "status": "Resigned"
+    }
+  ],
   "training": [
     {
       "id": "kbc-customer-service",
