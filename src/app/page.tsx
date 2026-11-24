@@ -6,11 +6,9 @@ const services = [
 ["05","Email setup","Professional business email, domain connection and mailbox configuration."],
 ["06","Website setup","Business website setup, domain connection, hosting and launch support."]
 ];
-const projects = [
-{name:"AtelierOS",type:"Fashion business management · SaaS",description:"A platform for fashion houses to manage clients, measurements, orders, production and inventory.",url:"https://atelieros.optiflowops.online",status:"In development"},
-{name:"Sowvera",type:"Fashion education · EdTech",description:"A planned operating system for fashion schools, connecting admissions, students, programmes, lessons and administration.",url:"https://sowvera.optiflowops.online",status:"Product development"},
-{name:"OptiFlow Ops Solutions",type:"Operations consulting · Business systems",description:"Operations, HR operations, project coordination and practical digital solutions for businesses.",url:"https://optiflowops.online",status:"Business website"}
-];
+import portfolioData from "@/data/portfolio.json";
+const projects = portfolioData.projects;
+const training = portfolioData.training;
 export default function Home(){return <main>
 <header className="container flex h-[82px] items-center justify-between border-b border-[var(--line)]"><a href="#home" className="text-[15px] font-semibold tracking-[-.04em]">Shedrack Ebete<span className="text-[var(--blue)]">.</span></a><nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation"><a className="nav-link" href="#about">About</a><a className="nav-link" href="#expertise">Services</a><a className="nav-link" href="#projects">Projects</a><a className="nav-link" href="#training">Training</a><a className="nav-link" href="#experience">Approach</a></nav><a href="#contact" className="button-dark">Let’s talk ↗</a></header>
 <section id="home" className="container grid min-h-[680px] items-center gap-14 py-20 lg:grid-cols-[1.2fr_.8fr]"><div><p className="eyebrow mb-8">Operations · Projects · People · Business systems</p><h1 className="display max-w-[900px]">I bring structure to <span className="text-[var(--blue)]">people, processes and ideas.</span></h1><div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><p className="max-w-[440px] text-[15px] leading-7 text-[var(--muted)]">I help organisations organise their work, coordinate delivery and put practical business systems in place.</p><div className="flex flex-wrap gap-3"><a className="button-dark" href="#projects">Explore my work</a><a className="button-outline" href="#contact">Get in touch</a></div></div></div><div className="relative mx-auto aspect-[4/5] w-full max-w-[390px] overflow-hidden bg-[#d9ddd8]"><img src="/images/shedrack-ebete.jpg" alt="Portrait of Shedrack Ebete" className="h-full w-full object-cover object-top"/></div></section>
