@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import portfolioData from "@/data/portfolio.json";
 
-type Project = { id:string; name:string; type:string; description:string; url?:string; status?:string; summary?:string; problem?:string; purpose?:string; goals?:string[]; solution?:string; role?:string; features?:string[]; outcome?:string; contribution?:string; lessons?:string; };
+type Project = { id:string; name:string; type:string; description:string; url?:string; status?:string; summary?:string; problem?:string; purpose?:string; goals?:string[]; solution?:string; role?:string; features?:string[]; outcome?:string; contribution?:string; lessons?:string; image?:string; logo?:string; };
 const projects = portfolioData.projects as Project[];
 export default function CaseStudyPage(){
  const params=useParams<{id:string}>(); const project=projects.find(item=>item.id===params.id);
