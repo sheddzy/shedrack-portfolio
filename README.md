@@ -43,12 +43,13 @@ Set these environment variables in the Render service's **Environment** page:
 
 | Variable | Purpose |
 | --- | --- |
+| `ADMIN_EMAIL` | `hire.shedrackebete@gmail.com`, the authorised admin login email |
 | `ADMIN_PASSWORD` | A long, unique password for the admin login |
 | `ADMIN_SESSION_SECRET` | A separate random secret used to sign the secure admin session cookie |
 | `GITHUB_TOKEN` | Fine-grained GitHub token with Contents read/write access to this repository |
 | `GITHUB_REPOSITORY` | `sheddzy/shedrack-portfolio` |
 
-Keep all secrets server-side. Do not prefix them with `NEXT_PUBLIC_` and do not commit them to GitHub. After setting them, redeploy the service. The admin login will then work at `https://shedrackebete.online/admin`.
+Keep all secrets server-side. Do not prefix them with `NEXT_PUBLIC_` and do not commit them to GitHub. After setting them, redeploy the service. The admin login will then work at `https://shedrackebete.online/admin` using `hire.shedrackebete@gmail.com` and the password configured in Render.
 
 An example variable template is in `.env.example`.
 
