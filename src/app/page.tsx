@@ -14,7 +14,7 @@ const projects = [
 export default function Home() {
   return (
     <main>
-      <header className="container flex h-[82px] items-center justify-between border-b border-[var(--line)]">
+      <header className="container flex h-[88px] items-center justify-between border-b border-[var(--line)]">
         <a href="#home" className="text-[15px] font-semibold tracking-[-.04em]">Shedrack Ebete<span className="text-[var(--blue)]">.</span></a>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
           <a className="nav-link" href="#about">About</a><a className="nav-link" href="#expertise">Expertise</a><a className="nav-link" href="#projects">Projects</a><a className="nav-link" href="#training">Training</a><a className="nav-link" href="#experience">Experience</a>
@@ -22,12 +22,12 @@ export default function Home() {
         <a href="#contact" className="button-dark">Let’s talk <span aria-hidden="true">↗</span></a>
       </header>
 
-      <section id="home" className="container grid min-h-[680px] items-center gap-12 py-24 lg:grid-cols-[1.35fr_.65fr]">
+      <section id="home" className="container grid min-h-[720px] items-center gap-14 py-24 lg:grid-cols-[1.2fr_.8fr]">
         <div>
-          <p className="eyebrow mb-8">Operations · Projects · Business systems</p>
+          <p className="eyebrow mb-8">Operations · Projects · People · Business systems</p>
           <h1 className="display max-w-[900px]">Turning business complexity into <span className="text-[var(--blue)]">organised execution.</span></h1>
           <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <p className="max-w-[440px] text-[15px] leading-7 text-[var(--muted)]">I help teams bring structure to the way work gets done through thoughtful operations, effective project management and practical technology.</p>
+            <p className="max-w-[440px] text-[15px] leading-7 text-[var(--muted)]">I lead with clarity, bring people and processes together, and turn complex priorities into work that gets done.</p>
             <div className="flex gap-3"><a className="button-dark" href="#projects">Explore my work</a><a className="button-outline" href="#contact">Get in touch</a></div>
           </div>
         </div>
@@ -52,26 +52,6 @@ export default function Home() {
         <div className="container"><div className="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="eyebrow mb-5">03 / Selected work</p><h2 className="section-title">Projects & initiatives</h2></div><p className="max-w-[350px] text-sm leading-6 text-[var(--muted)]">A selection of business and product work across operations, technology and service delivery.</p></div>
           <div className="grid gap-5 md:grid-cols-2">{projects.map((project, index) => <article key={project.name} className={`project-card ${index === 0 ? "md:col-span-2 md:grid md:grid-cols-[1fr_1fr]" : ""}`}><div className={`project-art ${project.tone} `}><span>{project.mark}</span><small className="absolute right-6 top-6 text-[10px] tracking-widest">0{index + 1}</small></div><div className="flex flex-col justify-between p-7 md:p-9"><div><p className="eyebrow">{project.type}</p><h3 className="mt-4 text-3xl tracking-[-.06em]">{project.name}</h3><p className="mt-4 max-w-[470px] text-sm leading-7 text-[var(--muted)]">{project.description}</p></div><p className="mt-10 text-xs text-[var(--blue)]">Product and operations work <span aria-hidden="true">↗</span></p></div></article>)}</div>
         </div>
-      </section>
-
-      <section id="training" className="bg-[#eae8e1] py-24">
-        <div className="container">
-          <div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]">
-            <div><p className="eyebrow">04 / Training & facilitation</p><h2 className="section-title mt-5">Helping people build practical skills.</h2></div>
-            <div>
-              <p className="max-w-[650px] text-lg leading-8 text-[#555a55]">I facilitate learning sessions for teams and individuals, translating workplace and project concepts into practical knowledge people can apply.</p>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                <article className="border-t border-[var(--line)] pt-5"><p className="eyebrow">Corporate training</p><h3 className="mt-3 text-xl tracking-[-.04em]">KBC Insurance</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Delivered customer service training for the organisation.</p></article>
-                <article className="border-t border-[var(--line)] pt-5"><p className="eyebrow">Corporate training</p><h3 className="mt-3 text-xl tracking-[-.04em]">Citimobile</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Corporate training engagement. Training topic to be confirmed.</p></article>
-                <article className="border-t border-[var(--line)] pt-5 sm:col-span-2"><p className="eyebrow">Project management education</p><h3 className="mt-3 text-xl tracking-[-.04em]">Codarq HQ</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Trained more than 20 students in project management.</p></article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" className="container py-24">
-        <div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]"><div><p className="eyebrow">05 / How I work</p><h2 className="section-title mt-5">From plan to practice.</h2></div><div className="space-y-8"><p className="max-w-[650px] text-lg leading-8 text-[#555a55]">Good operations are built through consistent execution. I bring structure to priorities, make responsibilities visible and help teams keep progress moving.</p><div className="grid gap-6 border-t border-[var(--line)] pt-7 sm:grid-cols-3"><div><p className="text-2xl tracking-[-.05em]">01</p><h3 className="mt-3 text-sm font-semibold">Understand</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Map the current situation, constraints and desired outcomes.</p></div><div><p className="text-2xl tracking-[-.05em]">02</p><h3 className="mt-3 text-sm font-semibold">Organise</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Translate priorities into workflows, ownership and clear plans.</p></div><div><p className="text-2xl tracking-[-.05em]">03</p><h3 className="mt-3 text-sm font-semibold">Execute</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Track delivery, solve blockers and improve the process as work progresses.</p></div></div></div></div>
       </section>
 
       <section id="training" className="bg-[#eae8e1] py-24">
