@@ -17,7 +17,7 @@ export default function Home() {
       <header className="container flex h-[82px] items-center justify-between border-b border-[var(--line)]">
         <a href="#home" className="text-[15px] font-semibold tracking-[-.04em]">Shedrack Ebete<span className="text-[var(--blue)]">.</span></a>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
-          <a className="nav-link" href="#about">About</a><a className="nav-link" href="#expertise">Expertise</a><a className="nav-link" href="#projects">Projects</a><a className="nav-link" href="#experience">Experience</a>
+          <a className="nav-link" href="#about">About</a><a className="nav-link" href="#expertise">Expertise</a><a className="nav-link" href="#projects">Projects</a><a className="nav-link" href="#training">Training</a><a className="nav-link" href="#experience">Experience</a>
         </nav>
         <a href="#contact" className="button-dark">Let’s talk <span aria-hidden="true">↗</span></a>
       </header>
