@@ -9,6 +9,7 @@ const emptyContent: Content = { projects: [], workItems: [], training: [] };
 const fieldClass = "w-full border border-[#d8d8d1] bg-white px-3 py-3 text-sm outline-none focus:border-[#315a70]";
 
 export default function AdminPage() {
+  const [email, setEmail] = useState("hire.shedrackebete@gmail.com");
   const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
   const [content, setContent] = useState<Content>(emptyContent);
@@ -31,7 +32,7 @@ export default function AdminPage() {
   async function login(event: FormEvent) {
     event.preventDefault(); setBusy(true); setMessage("");
     try {
-      const response = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password }) });
+      const response = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, password }) });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error);
       await loadContent();
@@ -86,7 +87,7 @@ export default function AdminPage() {
     setContent(current => ({ ...current, [section]: current[section].filter((_, i) => i !== index) }));
   }
 
-  if (!authenticated) return <main className="min-h-screen bg-[#f3f0e8] px-5 py-20 text-[#172b3a]"><form onSubmit={login} className="mx-auto max-w-md border border-[#d7d5cd] bg-white p-8"><a href="/" className="text-sm font-semibold">Shedrack Ebete / Portfolio</a><p className="eyebrow mt-10">Private workspace</p><h1 className="mt-3 text-4xl tracking-[-.06em]">Admin sign in</h1><p className="mt-3 text-sm leading-6 text-[#66727a]">Sign in to update projects, work entries and training records.</p><label className="mt-8 block text-xs font-semibold">Admin password</label><input className={fieldClass + " mt-2"} type="password" value={password} onChange={e => setPassword(e.target.value)} required autoComplete="current-password"/><button className="mt-5 w-full bg-[#172b3a] px-4 py-3 text-sm text-white disabled:opacity-50" disabled={busy}>{busy ? "Signing in..." : "Sign in"}</button>{message && <p className="mt-4 text-sm text-red-700">{message}</p>}<a href="/" className="mt-6 inline-block text-xs text-[#66727a] underline">Return to website</a></form></main>;
+  if (!authenticated) return <main className="min-h-screen bg-[#f3f0e8] px-5 py-20 text-[#172b3a]"><form onSubmit={login} className="mx-auto max-w-md border border-[#d7d5cd] bg-white p-8"><a href="/" className="text-sm font-semibold">Shedrack Ebete / Portfolio</a><p className="eyebrow mt-10">Private workspace</p><h1 className="mt-3 text-4xl tracking-[-.06em]">Admin sign in</h1><p className="mt-3 text-sm leading-6 text-[#66727a]">Sign in to update projects, work entries and training records.</p><label className="mt-8 block text-xs font-semibold">Admin email</label><input className={fieldClass + " mt-2"} type="email" value={email} onChange={e => setEmail(e.target.value)} required autoComplete="username"/><label className="mt-5 block text-xs font-semibold">Admin password</label><input className={fieldClass + " mt-2"} type="password" value={password} onChange={e => setPassword(e.target.value)} required autoComplete="current-password"/><button className="mt-5 w-full bg-[#172b3a] px-4 py-3 text-sm text-white disabled:opacity-50" disabled={busy}>{busy ? "Signing in..." : "Sign in"}</button>{message && <p className="mt-4 text-sm text-red-700">{message}</p>}<a href="/" className="mt-6 inline-block text-xs text-[#66727a] underline">Return to website</a></form></main>;
 
   const entries = content[section];
   return <main className="min-h-screen bg-[#f3f0e8] text-[#172b3a]"><header className="border-b border-[#d7d5cd] bg-white"><div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5"><div><a href="/" className="text-sm font-semibold">Shedrack Ebete</a><p className="mt-1 text-xs text-[#66727a]">Portfolio administration</p></div><button onClick={logout} className="border border-[#d7d5cd] px-4 py-2 text-xs">Sign out</button></div></header><div className="mx-auto max-w-6xl px-5 py-10"><div className="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="eyebrow">Content manager</p><h1 className="mt-3 text-4xl tracking-[-.06em]">Manage your portfolio</h1><p className="mt-2 text-sm text-[#66727a]">Updates are committed to your GitHub repository.</p></div><button onClick={save} disabled={busy} className="bg-[#172b3a] px-6 py-3 text-sm text-white disabled:opacity-50">{busy ? "Saving..." : "Save changes"}</button></div>
