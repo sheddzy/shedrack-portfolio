@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { FormEvent } from "react";
 
 type Entry = { id: string; name?: string; organisation?: string; type?: string; title?: string; description?: string; detail?: string; url?: string; status?: string; image?: string; logo?: string };
@@ -17,16 +17,16 @@ export default function AdminPage() {
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
 
-  async function loadContent() {
+  const loadContent = useCallback(async () => {
     const response = await fetch("/api/admin/content", { cache: "no-store" });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "Unable to load content.");
     setContent(data.content);
     setSha(data.sha);
     setAuthenticated(true);
-  }
+  }, []);
 
-  useEffect(() => { loadContent().catch(() => undefined); }, []);
+  useEffect(() => { loadContent().catch(() => undefined); }, [loadContent]);
 
   async function login(event: FormEvent) {
     event.preventDefault(); setBusy(true); setMessage("");
