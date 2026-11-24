@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shedrackebete.online"),
   title: "Shedrack Ebete | Operations, Projects & Business Systems",
   description: "Shedrack Ebete helps organisations bring structure to operations, projects and business systems.",
   openGraph: {
