@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import type { FormEvent } from "react";
 
 type Entry = { id: string; name?: string; organisation?: string; type?: string; title?: string; description?: string; detail?: string; url?: string; status?: string; image?: string; logo?: string };
 type Content = { projects: Entry[]; workItems: Entry[]; training: Entry[] };
@@ -27,7 +28,7 @@ export default function AdminPage() {
 
   useEffect(() => { loadContent().catch(() => undefined); }, []);
 
-  async function login(event: React.FormEvent) {
+  async function login(event: FormEvent) {
     event.preventDefault(); setBusy(true); setMessage("");
     try {
       const response = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ password }) });
