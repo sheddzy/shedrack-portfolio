@@ -25,5 +25,7 @@ export async function POST(request: Request) {
   });
   const payload = await result.json().catch(() => ({}));
   if (!result.ok) return NextResponse.json({ error: payload.message || "Image upload failed." }, { status: result.status });
-  return NextResponse.json({ ok: true, url: `/uploads/${path.split("/").pop()}` });
+  const branch = process.env.GITHUB_BRANCH || "main";
+  const publicUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${path}`;
+  return NextResponse.json({ ok: true, url: publicUrl });
 }
