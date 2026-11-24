@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "id": "atelieros",
+      "name": "AtelierOS",
+      "type": "Fashion business management",
+      "description": "A fashion house management platform covering clients, measurements, orders, production and inventory.",
+      "url": "https://atelieros.optiflowops.online",
+      "status": "In development",
+      "image": "",
+      "logo": ""
+    },
+    {
+      "id": "sowvera",
+      "name": "Sowvera",
+      "type": "Fashion education management",
+      "description": "A planned operating system for fashion schools, connecting admissions, students, programmes, lessons, practical projects and administration.",
+      "url": "https://sowvera.optiflowops.online",
+      "status": "In development",
+      "image": "",
+      "logo": ""
+    },
+    {
+      "id": "optiflow",
+      "name": "OptiFlow Ops Solutions",
+      "type": "Operations consulting and business systems",
+      "description": "An operations-focused business working across process improvement, HR operations, project coordination and practical digital solutions.",
+      "url": "https://optiflowops.online",
+      "status": "Active",
+      "image": "",
+      "logo": ""
+    }
+  ],
+  "workItems": [],
+  "training": [
+    {
+      "id": "kbc-customer-service",
+      "organisation": "KBC Insurance",
+      "title": "Customer Service",
+      "detail": "Corporate training"
+    },
+    {
+      "id": "citimobile-workplace-excellence",
+      "organisation": "Citimobile",
+      "title": "Workplace Excellence: Executing with Excellence, Influencing with Impact & Owning Results",
+      "detail": "Corporate training"
+    },
+    {
+      "id": "codarq-project-management",
+      "organisation": "Codarq HQ",
+      "title": "Project Management",
+      "detail": "Trained more than 20 students"
+    }
+  ]
+}
