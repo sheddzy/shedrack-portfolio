@@ -1,24 +1,71 @@
 {
+  "profileImage": "",
   "projects": [
     {
       "id": "atelieros",
       "name": "AtelierOS",
-      "type": "Fashion business management",
-      "description": "A fashion house management platform covering clients, measurements, orders, production and inventory.",
+      "type": "Fashion business management platform",
+      "description": "A fashion house management platform designed to bring client records, body measurements, orders, production activity and inventory into one operating system.",
       "url": "https://atelieros.optiflowops.online",
-      "status": "In development",
+      "status": "In development · Pilot",
       "image": "",
-      "logo": ""
+      "logo": "",
+      "summary": "AtelierOS is being developed to help fashion businesses coordinate the operational work behind each customer order, from client records and measurements through production and inventory.",
+      "problem": "Fashion businesses can manage customer information, measurements, orders, production tasks and stock across separate notebooks, spreadsheets and messaging threads. This makes it harder to maintain a clear view of work in progress and accountability.",
+      "purpose": "Create a connected workspace for fashion houses to manage day-to-day operations and give owners and managers clearer oversight.",
+      "goals": [
+        "Bring client profiles and measurement records into one place.",
+        "Connect customer orders to production workflows.",
+        "Support inventory visibility and stock allocation.",
+        "Give owners and managers oversight of staff activity and operational records."
+      ],
+      "solution": "A multi-role fashion business management platform with connected client, order, production and inventory workflows.",
+      "role": "Product direction, operations workflow definition and project coordination.",
+      "features": [
+        "Client records and body measurements",
+        "Customer orders and garment records",
+        "Production jobs and tailor assignments",
+        "Inventory and stock movement workflows",
+        "Role-based access for fashion-house teams",
+        "Management visibility across operational activity"
+      ],
+      "outcome": "The product scope and core operating workflows have been defined and are being implemented. A pilot approach is planned. No quantified business impact is being claimed at this stage.",
+      "contribution": "Defined operational requirements and workflows for the fashion-house use case, including role responsibilities and production processes.",
+      "statusDetail": "In development. Pilot stage planned.",
+      "lessons": "The product is being shaped around the actual sequence of work in a fashion house, rather than treating customer records, production and inventory as disconnected features."
     },
     {
       "id": "sowvera",
       "name": "Sowvera",
-      "type": "Fashion education management",
-      "description": "A planned operating system for fashion schools, connecting admissions, students, programmes, lessons, practical projects and administration.",
+      "type": "Fashion education management platform",
+      "description": "A fashion academy operating system concept connecting admissions, students, programmes, instructors, lessons, practical projects and administration.",
       "url": "https://sowvera.optiflowops.online",
       "status": "In development",
       "image": "",
-      "logo": ""
+      "logo": "",
+      "summary": "Sowvera is being developed as a management platform for fashion schools and academies, bringing academic administration and practical training activity into a connected system.",
+      "problem": "Fashion schools need to coordinate admissions, student records, programmes, instructors, schedules, attendance, assessments, fees and certificates. Managing these activities separately can make administration and reporting difficult.",
+      "purpose": "Provide fashion schools with a central operating workspace for managing the student journey and academy operations.",
+      "goals": [
+        "Organise admissions and student records.",
+        "Coordinate programmes, instructors and timetables.",
+        "Track lessons, attendance and practical projects.",
+        "Support assessments, fees, certificates and reporting."
+      ],
+      "solution": "A multi-tenant SaaS platform planned around the administrative and learning workflows of fashion academies.",
+      "role": "Product concept development, operational requirements and project direction.",
+      "features": [
+        "Admissions and student management",
+        "Programmes and instructor coordination",
+        "Timetables and lesson management",
+        "Attendance and practical project tracking",
+        "Assessments and fee administration",
+        "Certificates, communications and reports"
+      ],
+      "outcome": "Product requirements and platform direction have been outlined. Implementation is in progress; no adoption or performance figures are being claimed.",
+      "contribution": "Mapped the operational needs of fashion education providers into a proposed digital product structure.",
+      "statusDetail": "In development.",
+      "lessons": "Fashion education combines academic administration with practical, project-based learning. Both sides need to be represented in the operating model."
     },
     {
       "id": "optiflow",
@@ -28,10 +75,62 @@
       "url": "https://optiflowops.online",
       "status": "Active",
       "image": "",
-      "logo": ""
+      "logo": "",
+      "summary": "OptiFlow Ops Solutions is the umbrella business through which operations support, business systems and digital solutions are developed and delivered.",
+      "problem": "Growing businesses often need clearer operating processes and dependable digital foundations, but may not have the internal capacity to organise these areas.",
+      "purpose": "Support organisations with practical operations improvement and accessible digital business solutions.",
+      "goals": [
+        "Improve clarity around business processes and responsibilities.",
+        "Support HR and people operations.",
+        "Coordinate projects and implementation work.",
+        "Help businesses establish practical digital infrastructure."
+      ],
+      "solution": "An operations and business systems service model supported by digital products and implementation services.",
+      "role": "Operations consulting and business/project development.",
+      "features": [
+        "Operations and process support",
+        "HR operations support",
+        "Project coordination",
+        "Business systems and workflow design",
+        "Website and professional email setup services"
+      ],
+      "outcome": "OptiFlow is active as the umbrella business. Specific client engagements and quantified outcomes will be added as they are verified.",
+      "contribution": "Developing the service direction and connecting operational needs with practical business systems.",
+      "lessons": "Digital tools create value when they support a clear operating process and a defined business need."
     }
   ],
   "workItems": [],
+  "websites": [
+    {
+      "id": "atelieros-site",
+      "name": "AtelierOS",
+      "organisation": "AtelierOS",
+      "url": "https://atelieros.optiflowops.online",
+      "scope": "Public product website and platform entry point.",
+      "role": "Product and operations project",
+      "status": "In development"
+    },
+    {
+      "id": "sowvera-site",
+      "name": "Sowvera",
+      "organisation": "Sowvera",
+      "url": "https://sowvera.optiflowops.online",
+      "scope": "Public product website and platform entry point.",
+      "role": "Product concept and project direction",
+      "status": "In development"
+    },
+    {
+      "id": "optiflow-site",
+      "name": "OptiFlow Ops Solutions",
+      "organisation": "OptiFlow Ops Solutions Ltd",
+      "url": "https://optiflowops.online",
+      "scope": "Business website for the operations and digital solutions umbrella brand.",
+      "role": "Business development and operations",
+      "status": "Active"
+    }
+  ],
+  "digitalSetups": [],
+  "experience": [],
   "training": [
     {
       "id": "kbc-customer-service",
@@ -52,5 +151,5 @@
       "detail": "Trained more than 20 students"
     }
   ],
-  "profileImage": ""
+  "metrics": []
 }
