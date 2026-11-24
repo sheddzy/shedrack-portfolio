@@ -74,6 +74,29 @@ export default function Home() {
         <div className="grid gap-12 md:grid-cols-[.65fr_1.35fr]"><div><p className="eyebrow">05 / How I work</p><h2 className="section-title mt-5">From plan to practice.</h2></div><div className="space-y-8"><p className="max-w-[650px] text-lg leading-8 text-[#555a55]">Good operations are built through consistent execution. I bring structure to priorities, make responsibilities visible and help teams keep progress moving.</p><div className="grid gap-6 border-t border-[var(--line)] pt-7 sm:grid-cols-3"><div><p className="text-2xl tracking-[-.05em]">01</p><h3 className="mt-3 text-sm font-semibold">Understand</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Map the current situation, constraints and desired outcomes.</p></div><div><p className="text-2xl tracking-[-.05em]">02</p><h3 className="mt-3 text-sm font-semibold">Organise</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Translate priorities into workflows, ownership and clear plans.</p></div><div><p className="text-2xl tracking-[-.05em]">03</p><h3 className="mt-3 text-sm font-semibold">Execute</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">Track delivery, solve blockers and improve the process as work progresses.</p></div></div></div></div>
       </section>
 
+      <section id="training" className="bg-[#eae8e1] py-24">
+        <div className="container grid gap-12 md:grid-cols-[.65fr_1.35fr]">
+          <div><p className="eyebrow">05 / Training & facilitation</p><h2 className="section-title mt-5">Helping people work with greater impact.</h2></div>
+          <div>
+            <p className="max-w-[620px] text-sm leading-7 text-[var(--muted)]">I facilitate corporate and professional training, translating workplace expectations into practical behaviours, clearer execution and stronger ownership.</p>
+            <div className="mt-8 border-t border-[var(--line)]">
+              <article className="grid gap-2 border-b border-[var(--line)] py-6 sm:grid-cols-[1fr_1.4fr]">
+                <div><h3 className="text-lg tracking-[-.04em]">KBC Insurance</h3><p className="mt-1 text-xs text-[var(--muted)]">Corporate training</p></div>
+                <p className="text-sm leading-6 text-[var(--muted)]">Customer Service</p>
+              </article>
+              <article className="grid gap-2 border-b border-[var(--line)] py-6 sm:grid-cols-[1fr_1.4fr]">
+                <div><h3 className="text-lg tracking-[-.04em]">Citimobile</h3><p className="mt-1 text-xs text-[var(--muted)]">Corporate training</p></div>
+                <div><p className="text-sm font-medium leading-6">Workplace Excellence: Executing with Excellence, Influencing with Impact & Owning Results</p></div>
+              </article>
+              <article className="grid gap-2 border-b border-[var(--line)] py-6 sm:grid-cols-[1fr_1.4fr]">
+                <div><h3 className="text-lg tracking-[-.04em]">Codarq HQ</h3><p className="mt-1 text-xs text-[var(--muted)]">Project management training</p></div>
+                <p className="text-sm leading-6 text-[var(--muted)]">Trained more than 20 students in project management.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="contact" className="bg-[#20221f] py-20 text-[#f5f3ee]">
         <div className="container"><p className="eyebrow !text-[#a9c0cc]">06 / Start a conversation</p><div className="mt-8 grid gap-10 md:grid-cols-[1fr_auto] md:items-end"><div><h2 className="max-w-[760px] text-5xl leading-[.98] tracking-[-.07em] md:text-7xl">Let’s make work work better.</h2><p className="mt-6 max-w-[430px] text-sm leading-7 text-[#b6b9b2]">Open to operations and project roles, consulting engagements and conversations about business systems.</p></div><div className="flex flex-col items-start gap-4"><a className="button-dark !bg-[#e4e8e3] !text-[#20221f]" href="https://www.linkedin.com/in/shedrackebete01/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><a className="text-sm text-[#c5cbc4] underline underline-offset-4" href="https://github.com/sheddzy">GitHub profile ↗</a></div></div><div className="mt-20 flex flex-col justify-between gap-3 border-t border-[#454842] pt-6 text-xs text-[#a4a89f] sm:flex-row"><span>© {new Date().getFullYear()} Shedrack Ebete</span><span>Operations · Projects · Business systems</span></div></div>
       </footer>
