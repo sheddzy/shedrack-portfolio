@@ -8,7 +8,7 @@
       "description": "A fashion house management platform designed to bring client records, body measurements, orders, production activity and inventory into one operating system.",
       "url": "https://atelieros.optiflowops.online",
       "status": "In development · Pilot",
-      "image": "",
+      "image": "https://raw.githubusercontent.com/sheddzy/shedrack-portfolio/main/public/uploads/2d588adb-bdd5-4917-86dc-7f6efdeda4b2.png",
       "logo": "",
       "summary": "AtelierOS is being developed to help fashion businesses coordinate the operational work behind each customer order, from client records and measurements through production and inventory.",
       "problem": "Fashion businesses can manage customer information, measurements, orders, production tasks and stock across separate notebooks, spreadsheets and messaging threads. This makes it harder to maintain a clear view of work in progress and accountability.",
