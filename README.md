@@ -1,11 +1,13 @@
 # Shedrack Ebete Portfolio
 
-Personal portfolio for operations management, project management, HR operations, corporate training and business systems.
+Personal portfolio for operations management, project management, HR operations, corporate training, business systems, professional email setup and website setup.
 
 ## Stack
 - Next.js App Router
 - TypeScript
 - Tailwind CSS
+- GitHub-backed portfolio content manager
+- Render hosting
 
 ## Local development
 ```bash
@@ -19,18 +21,39 @@ npm run build
 npm run start
 ```
 
-## Deploy to Render
-This repository includes a `render.yaml` Blueprint for a Node.js web service.
+## Render deployment
+The Render web service is configured to deploy from `main` automatically.
 
-1. Sign in to Render and choose **New + → Blueprint**.
-2. Connect `sheddzy/shedrack-portfolio`.
-3. Render will detect `render.yaml` and create the web service.
-4. Wait for the first deployment to finish.
-5. Add the custom domain in the service's **Settings → Custom Domains**.
-6. Configure the DNS records Render displays at your domain provider.
-7. Enable HTTPS and verify the domain.
+- Service: https://dashboard.render.com/web/srv-dc2m9q68bjmc7384n730
+- Temporary service URL: https://shedrack-portfolio.onrender.com
+- Intended custom domain: https://shedrackebete.online
 
-The service uses Node.js 20, `npm install && npm run build`, and `npm run start`.
+Add `shedrackebete.online` in Render under **Settings → Custom Domains**, then point the DNS records Render provides at the domain's DNS host. The custom domain is not confirmed as attached until Render shows it as verified.
 
-## Content verification
-Project descriptions are intentionally conservative. Confirm implementation status, responsibilities, dates and measurable outcomes before adding case-study claims. Add the approved portrait at `public/images/shedrack-ebete.jpg` and the final CV before launch. Set the actual custom domain in the site's metadata once confirmed.
+## Admin dashboard setup
+
+The private content manager is at `/admin`. It supports adding, editing and removing:
+- Projects
+- Other work and case studies
+- Training records
+
+Admin changes are committed to `src/data/portfolio.json` in this repository. With Render auto-deploy enabled, the public portfolio rebuilds using the updated content.
+
+Set these environment variables in the Render service's **Environment** page:
+
+| Variable | Purpose |
+| --- | --- |
+| `ADMIN_PASSWORD` | A long, unique password for the admin login |
+| `ADMIN_SESSION_SECRET` | A separate random secret used to sign the secure admin session cookie |
+| `GITHUB_TOKEN` | Fine-grained GitHub token with Contents read/write access to this repository |
+| `GITHUB_REPOSITORY` | `sheddzy/shedrack-portfolio` |
+
+Keep all secrets server-side. Do not prefix them with `NEXT_PUBLIC_` and do not commit them to GitHub. After setting them, redeploy the service. The admin login will then work at `https://shedrackebete.online/admin`.
+
+An example variable template is in `.env.example`.
+
+## Images and logos
+The portrait is referenced at `public/images/shedrack-ebete.jpg`; add the approved original portrait file at that exact path before launch. The admin project editor accepts public image and logo URLs, and the public project cards will display those assets when supplied. Project websites were not reachable by the automated page retriever during this build, so no third-party logos or screenshots have been fabricated. Add approved screenshots or logo URLs through the admin dashboard once available.
+
+## Content accuracy
+Project descriptions are conservative. Confirm implementation status, responsibilities, dates and measurable outcomes before adding case-study claims. Keep product development and completed client work clearly distinguished.
